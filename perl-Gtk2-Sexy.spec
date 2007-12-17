@@ -18,7 +18,6 @@ BuildRequires:	perl-Cairo
 BuildRequires:	perl-Gtk2
 BuildRequires:	perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module allows a perl developer to access the widgets of the sexy
