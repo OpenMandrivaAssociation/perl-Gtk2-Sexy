@@ -1,24 +1,24 @@
-%define module	Gtk2-Sexy
-%define	name	perl-%{module}
-%define	version	0.05
-%define	release	%mkrel 1
+%define upstream_name	 Gtk2-Sexy
+%define	upstream_version 0.05
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl interface to the sexy widget collection 
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://www.chipx86.com/wiki/Libsexy
-Source:		http://www.cpan.org/modules/by-module/Gtk2/%{module}-%{version}.tar.bz2
+Url:		http://www.chipx86.com/wiki/Libsexy
+Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	libsexy-devel
-BuildRequires:	perl-devel
-BuildRequires:	perl-Glib
 BuildRequires:	perl-Cairo
-BuildRequires:	perl-Gtk2
 BuildRequires:	perl-ExtUtils-Depends
 BuildRequires:	perl-ExtUtils-PkgConfig
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRequires:	perl-Glib
+BuildRequires:	perl-Gtk2
+BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module allows a perl developer to access the widgets of the sexy
@@ -28,7 +28,7 @@ widget collection, which currently includes the following widgets:
 - SexyUrlLabel: a GtkLabel with support for embedded hyperlinks
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -50,4 +50,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorarch}/Gtk2
 %{perl_vendorarch}/auto/Gtk2
-
