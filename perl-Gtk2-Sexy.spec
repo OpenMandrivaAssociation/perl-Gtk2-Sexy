@@ -4,7 +4,7 @@
 Summary:	Perl interface to the sexy widget collection 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	12
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://www.chipx86.com/wiki/Libsexy
