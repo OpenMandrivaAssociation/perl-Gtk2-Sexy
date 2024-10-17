@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	20
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://www.chipx86.com/wiki/Libsexy
+Url:		https://www.chipx86.com/wiki/Libsexy
 Source0:	http://www.cpan.org/modules/by-module/Gtk2/%{modname}-%{modver}.tar.bz2
 Source1:	perl-Gtk2-Sexy.rpmlintrc
 BuildRequires:	perl-Cairo
